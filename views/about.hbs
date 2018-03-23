@@ -1,0 +1,17 @@
+<!-- Here we have an HTML page. The goal is to serve the page up in the express app without
+having to manually configure it-->
+
+{{!-- The pagetitle and current year are dynamic data getting injected into our application --}}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Help Page</title>
+</head>
+<body>
+	{{> header}}
+	<p>Some text here</p>
+
+	{{> footer}}
+</body>
+</html>
