@@ -7,6 +7,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+// The below command is to used to run the app in heroku. The OR statement is used to run the file locally.
+const port = process.env.PORT || 3000;
 var app = express();
 
 // Partials are the code which is repeated in every file, so we can store them in a directory
@@ -94,6 +96,6 @@ app.get('/bad', (req, res) => {
 
 // The listener is very important. It listens to the request on the port 3000 in the local machine
 // The second callback is optional
-app.listen(3000, () => {
-	console.log('Server is up and running at port 3000');
+app.listen(port, () => {
+	console.log('Server is up and running at port', port);
 });
